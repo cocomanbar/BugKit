@@ -382,8 +382,8 @@
 		61A2DC3620AC3D22009B14AA = {
 			isa = PBXGroup;
 			children = (
-				61A2DC7420AC7137009B14AA /* BugKit */,
-				61A2DC4120AC3D22009B14AA /* ShowBugKit */,
+				61A2DC7420AC7137009B14AA /* ShowBugKit */,
+				61A2DC4120AC3D22009B14AA /* ShowBugKitDemo */,
 				61A2DC5A20AC3D22009B14AA /* ShowBugKitTests */,
 				61A2DC6520AC3D22009B14AA /* ShowBugKitUITests */,
 				61A2DC4020AC3D22009B14AA /* Products */,
@@ -402,7 +402,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		61A2DC4120AC3D22009B14AA /* ShowBugKit */ = {
+		61A2DC4120AC3D22009B14AA /* ShowBugKitDemo */ = {
 			isa = PBXGroup;
 			children = (
 				615AB22820C4DF1C006989A6 /* Alert */,
@@ -418,7 +418,7 @@
 				61A2DC5020AC3D22009B14AA /* Info.plist */,
 				61A2DC5120AC3D22009B14AA /* main.m */,
 			);
-			path = ShowBugKit;
+			path = ShowBugKitDemo;
 			sourceTree = "<group>";
 		};
 		61A2DC5A20AC3D22009B14AA /* ShowBugKitTests */ = {
@@ -439,12 +439,12 @@
 			path = ShowBugKitUITests;
 			sourceTree = "<group>";
 		};
-		61A2DC7420AC7137009B14AA /* BugKit */ = {
+		61A2DC7420AC7137009B14AA /* ShowBugKit */ = {
 			isa = PBXGroup;
 			children = (
 				61A2DC7E20AD15A5009B14AA /* BugAssistiveTouch */,
 			);
-			path = BugKit;
+			path = ShowBugKit;
 			sourceTree = "<group>";
 		};
 		61A2DC7E20AD15A5009B14AA /* BugAssistiveTouch */ = {
