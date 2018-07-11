@@ -35,13 +35,13 @@
  
  1、Http捕抓
 
-![image](https://github.com/cocomanbar/ShowBugKit/raw/master/source/http.gif)
+![image](https://github.com/cocomanbar/BugKit/blob/master/source/http.gif)
  
  2、crash日记查看
  
-![image](https://github.com/cocomanbar/ShowBugKit/raw/master/source/crash.gif)
+![image](https://github.com/cocomanbar/BugKit/blob/master/source/crash.gif)
  
  3、log重定向打印
  
-![image](https://github.com/cocomanbar/ShowBugKit/raw/master/source/log.gif)
+![image](https://github.com/cocomanbar/BugKit/blob/master/source/log.gif)
 
