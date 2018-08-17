@@ -4,7 +4,7 @@
 //
 //  Created by cocomanber on 2017/8/29.
 //  Copyright © 2017年 cocomanber. All rights reserved.
-//
+//  仅仅是磁盘缓存（不包括下载文件）
 
 #import <Foundation/Foundation.h>
 
@@ -14,45 +14,36 @@
  *  将数据写入磁盘
  *
  *  @param data      数据
- *  @param directory 目录
  *  @param filename  文件名
  */
-+ (void)writeData:(id)data
-            toDir:(NSString *)directory
-         filename:(NSString *)filename;
++ (void)writeData:(id)data filename:(NSString *)filename;
 
 /**
  *  从磁盘读取数据
  *
- *  @param directory 目录
  *  @param filename  文件名
  *
  *  @return 数据
  */
-+ (id)readDataFromDir:(NSString *)directory
-             filename:(NSString *)filename;
++ (id)readDataFromFileName:(NSString *)filename;
 
 /**
  *  获取目录中文件总大小
  *
- *  @param directory 目录名
- *
  *  @return 文件总大小
  */
-+ (NSUInteger)dataSizeInDir:(NSString *)directory;
++ (float)dataSizeInDirectory;
 
 /**
- *  清理目录中的文件
+ *  清理过期文件
  *
- *  @param directory 目录名
+ *  @param completionBlock 回调可选
  */
-+ (void)clearDataIinDir:(NSString *)directory;
++ (void)cleanDiskWithioQueue:(dispatch_queue_t)ioQueue CompletionBlock:(void(^)(void))completionBlock;
 
 /**
- *  删除某文件
- *
- *  @param fileUrl 文件路径
+ *  删除总目录文件 - 用于升级后清理掉全部文件，有接口修改升级的可能。
  */
-+ (void)deleteCache:(NSString *)fileUrl;
++ (void)cleanDisk;
 
 @end

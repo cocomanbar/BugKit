@@ -11,25 +11,40 @@
 
 @implementation TMCheckNetworkStatus
 
-+(void)netWorkState:(netStateBlock)block;
-{
+/* 开启网络检测 */
++ (void)tm_StartNetworking{
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
-    // 提示：要监控网络连接状态，必须要先调用单例的startMonitoring方法
     [manager startMonitoring];
-    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        block(status);
-    }];
 }
 
-//有无网络
-+ (BOOL)isConnectionAvailable
-{
+/* 数据网络 */
++ (BOOL)tm_4GNetworking{
+    AFNetworkReachabilityManager *reachabilityManager = [AFNetworkReachabilityManager sharedManager];
+    if (reachabilityManager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWWAN) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+/* 无网络 */
++ (BOOL)tm_NoNetworking{
     AFNetworkReachabilityManager *reachabilityManager = [AFNetworkReachabilityManager sharedManager];
     if (reachabilityManager.networkReachabilityStatus == AFNetworkReachabilityStatusUnknown ||
         reachabilityManager.networkReachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
-        return NO;
-    }else{
         return YES;
+    }else{
+        return NO;
+    }
+}
+
+/* Wi-Fi网络 */
++ (BOOL)tm_WiFiNetworking{
+    AFNetworkReachabilityManager *reachabilityManager = [AFNetworkReachabilityManager sharedManager];
+    if (reachabilityManager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi) {
+        return YES;
+    }else{
+        return NO;
     }
 }
 

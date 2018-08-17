@@ -8,16 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^netStateBlock)(NSInteger netState);
-
 @interface TMCheckNetworkStatus : NSObject
 
-+(void)netWorkState:(netStateBlock)block;
+/* 开启网络检测 */
++ (void)tm_StartNetworking;
 
-/**
- 是否有网络
- @return YES/NO
- */
-+ (BOOL)isConnectionAvailable;
+/* 数据网络 */
++ (BOOL)tm_4GNetworking;
+
+/* 无网络 */
++ (BOOL)tm_NoNetworking;
+
+/* Wi-Fi网络 */
++ (BOOL)tm_WiFiNetworking;
 
 @end

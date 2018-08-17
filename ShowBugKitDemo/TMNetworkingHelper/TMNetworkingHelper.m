@@ -68,10 +68,6 @@ static AFHTTPSessionManager *_sessionManager;
                                                                                   @"application/octet-stream",
                                                                                   @"application/zip"]];
     }
-    //每次网络请求的时候，检查此时磁盘中的缓存大小，阈值默认是200MB，如果超过阈值，则清理LRU缓存
-    //同时也会清理过期缓存，缓存默认SSL是7天
-    //磁盘缓存的大小和SSL的设置可以通过该方法TMNetworkConfig.m设置
-    [[TMCacheManager shareManager] clearLRUCache];
     return _sessionManager;
 }
 
@@ -166,7 +162,7 @@ static AFHTTPSessionManager *_sessionManager;
             if (successBlock) successBlock(responseObj);
         }
     }
-    if (![TMCheckNetworkStatus isConnectionAvailable]) {
+    if ([TMCheckNetworkStatus tm_NoNetworking]) {
         if (failBlock) failBlock(TM_ERROR);
         return session;
     }
@@ -326,7 +322,7 @@ static AFHTTPSessionManager *_sessionManager;
             if (successBlock) successBlock(responseObj);
         }
     }
-    if (![TMCheckNetworkStatus isConnectionAvailable]) {
+    if ([TMCheckNetworkStatus tm_NoNetworking]) {
         if (failBlock) failBlock(TM_ERROR);
         return session;
     }
@@ -416,7 +412,7 @@ static AFHTTPSessionManager *_sessionManager;
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    if (![TMCheckNetworkStatus isConnectionAvailable]) {
+    if ([TMCheckNetworkStatus tm_NoNetworking]) {
         if (failBlock) failBlock(TM_ERROR);
         return session;
     }
@@ -469,7 +465,7 @@ static AFHTTPSessionManager *_sessionManager;
                       successBlock:(TMMultUploadSuccessBlock)successBlock
                          failBlock:(TMMultUploadFailBlock)failBlock {
     
-    if (![TMCheckNetworkStatus isConnectionAvailable]) {
+    if ([TMCheckNetworkStatus tm_NoNetworking]) {
         if (failBlock) failBlock(@[TM_ERROR]);
         return nil;
     }
@@ -629,36 +625,6 @@ static AFHTTPSessionManager *_sessionManager;
 
 + (NSArray *)currentRunningTasks {
     return [[self allTasks] copy];
-}
-
-@end
-
-
-@implementation TMNetworkingHelper (cache)
-
-+ (NSUInteger)totalCacheSize {
-    return [[TMCacheManager shareManager] totalCacheSize];
-}
-
-+ (NSUInteger)totalDownloadDataSize {
-    return [[TMCacheManager shareManager] totalDownloadDataSize];
-}
-
-+ (void)clearDownloadData {
-    [[TMCacheManager shareManager] clearDownloadData];
-}
-
-+ (NSString *)getDownDirectoryPath {
-    return [[TMCacheManager shareManager] getDownDirectoryPath];
-}
-
-+ (NSString *)getCacheDiretoryPath {
-    
-    return [[TMCacheManager shareManager] getCacheDiretoryPath];
-}
-
-+ (void)clearTotalCache {
-    [[TMCacheManager shareManager] clearTotalCache];
 }
 
 @end

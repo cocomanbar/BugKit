@@ -11,8 +11,6 @@
 		613558C620ADB8A900419EBF /* BugAssistiveBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 613558C520ADB8A900419EBF /* BugAssistiveBundle.bundle */; };
 		614A9EBD20B5476300D44DF5 /* TMCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A9EB120B5476300D44DF5 /* TMCacheManager.m */; };
 		614A9EBE20B5476300D44DF5 /* TMDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A9EB320B5476300D44DF5 /* TMDiskCache.m */; };
-		614A9EBF20B5476300D44DF5 /* TMLRUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A9EB520B5476300D44DF5 /* TMLRUManager.m */; };
-		614A9EC020B5476300D44DF5 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A9EB720B5476300D44DF5 /* TMMemoryCache.m */; };
 		614A9EC120B5476300D44DF5 /* TMNetworkingHelper+requsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A9EBA20B5476300D44DF5 /* TMNetworkingHelper+requsetManager.m */; };
 		614A9EC220B5476300D44DF5 /* TMNetworkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A9EBC20B5476300D44DF5 /* TMNetworkingHelper.m */; };
 		614A9EC520B548EA00D44DF5 /* NSURLRequest+BugAssistiveIdentify.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A9EC420B548EA00D44DF5 /* NSURLRequest+BugAssistiveIdentify.m */; };
@@ -83,10 +81,6 @@
 		614A9EB120B5476300D44DF5 /* TMCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCacheManager.m; sourceTree = "<group>"; };
 		614A9EB220B5476300D44DF5 /* TMDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDiskCache.h; sourceTree = "<group>"; };
 		614A9EB320B5476300D44DF5 /* TMDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDiskCache.m; sourceTree = "<group>"; };
-		614A9EB420B5476300D44DF5 /* TMLRUManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMLRUManager.h; sourceTree = "<group>"; };
-		614A9EB520B5476300D44DF5 /* TMLRUManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMLRUManager.m; sourceTree = "<group>"; };
-		614A9EB620B5476300D44DF5 /* TMMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMMemoryCache.h; sourceTree = "<group>"; };
-		614A9EB720B5476300D44DF5 /* TMMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMMemoryCache.m; sourceTree = "<group>"; };
 		614A9EB920B5476300D44DF5 /* TMNetworkingHelper+requsetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TMNetworkingHelper+requsetManager.h"; sourceTree = "<group>"; };
 		614A9EBA20B5476300D44DF5 /* TMNetworkingHelper+requsetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TMNetworkingHelper+requsetManager.m"; sourceTree = "<group>"; };
 		614A9EBB20B5476300D44DF5 /* TMNetworkingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNetworkingHelper.h; sourceTree = "<group>"; };
@@ -315,10 +309,6 @@
 				614A9EB120B5476300D44DF5 /* TMCacheManager.m */,
 				614A9EB220B5476300D44DF5 /* TMDiskCache.h */,
 				614A9EB320B5476300D44DF5 /* TMDiskCache.m */,
-				614A9EB420B5476300D44DF5 /* TMLRUManager.h */,
-				614A9EB520B5476300D44DF5 /* TMLRUManager.m */,
-				614A9EB620B5476300D44DF5 /* TMMemoryCache.h */,
-				614A9EB720B5476300D44DF5 /* TMMemoryCache.m */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -707,14 +697,12 @@
 				6155577E20AF1FDA0028EB15 /* BugAssistiveManager.m in Sources */,
 				614A9ECE20B54A2900D44DF5 /* BugAssistiveHttpDataSource.m in Sources */,
 				614A9EBD20B5476300D44DF5 /* TMCacheManager.m in Sources */,
-				614A9EBF20B5476300D44DF5 /* TMLRUManager.m in Sources */,
 				6155578120AF2A540028EB15 /* BugAssistiveCrashHelper.m in Sources */,
 				61A2DCCC20AD7CB5009B14AA /* BugAssistiveHttpsViewController.m in Sources */,
 				61694DAB20B0390B00E4B570 /* BugAssistiveContentViewController.m in Sources */,
 				615AB22F20C4DF36006989A6 /* NSObject+Runtime.m in Sources */,
 				61DA3B5320B2766D00D98C3C /* BugAssistiveKeyboardView.m in Sources */,
 				61D8531820B9320D00630874 /* TMCheckNetworkStatus.m in Sources */,
-				614A9EC020B5476300D44DF5 /* TMMemoryCache.m in Sources */,
 				614A9ED420B54D8900D44DF5 /* BugAssistiveHttpHelper.m in Sources */,
 				61A2DC4420AC3D22009B14AA /* AppDelegate.m in Sources */,
 				611B3E7820B41377002B6B74 /* UITabBar+BugAssistiveBadge.m in Sources */,
@@ -889,7 +877,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = ShowBugKit/Info.plist;
+				INFOPLIST_FILE = "/Users/cocomanber/Documents/迈者科技/Echo/BugKit/ShowBugKitDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cocomanber.ShowBugKit;
@@ -905,7 +893,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = ShowBugKit/Info.plist;
+				INFOPLIST_FILE = "/Users/cocomanber/Documents/迈者科技/Echo/BugKit/ShowBugKitDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cocomanber.ShowBugKit;

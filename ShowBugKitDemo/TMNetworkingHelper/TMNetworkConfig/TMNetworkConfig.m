@@ -25,8 +25,6 @@
         _enableDebug = NO;
         _requestTimeout = 30;
         _betaVersion = YES;
-        _cacheTime = 7 * 24 * 60 * 60;
-        _diskValue = 200 * 1024 * 1024;
         _apiAnalyse = NO;
         
         //举个例子

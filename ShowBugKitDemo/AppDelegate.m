@@ -32,10 +32,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    /* 网络检测 */
-    [TMCheckNetworkStatus netWorkState:^(NSInteger netState) {
-        
-    }];
+    [TMCheckNetworkStatus tm_StartNetworking];
     
     /* BugKit */
     BugAssistiveConfig *config  = [BugAssistiveConfig shareManager];

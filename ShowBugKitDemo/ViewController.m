@@ -73,10 +73,14 @@
 - (IBAction)buttonType2:(UIButton *)sender {
     NSDictionary *dict = @{@"key": @"1e86b8ec4d601567841d73a942132f65",//1e86b8ec4d601567841d73a942132f65
                            @"dtype": @"",
-                           @"parentid": @""
+                           @"parentid": @"10001"
                            };
-    [TMNetworkingHelper postWithUrl:kaaaaaaUrl refreshRequest:YES cache:YES params:dict successBlock:^(id response) {
+    [TMNetworkingHelper postWithUrl:kaaaaaaUrl refreshRequest:NO cache:YES params:dict successBlock:^(id response) {
         NSLog(@"-->>>%@",response);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"-->>>%@",[NSThread currentThread]);
+        });
     } failBlock:^(NSError *error) {
         NSDictionary *errorInfo = error.userInfo;
         /* 统一错误码风格 */
@@ -88,15 +92,66 @@
 }
 
 - (IBAction)buttonType3:(UIButton *)sender {
-    
+    NSDictionary *dict = @{@"key": @"1e86b8ec4d601567841d73a942132f65",//1e86b8ec4d601567841d73a942132f65
+                           @"dtype": @"",
+                           @"parentid": @"10002"
+                           };
+    [TMNetworkingHelper postWithUrl:kaaaaaaUrl refreshRequest:NO cache:YES params:dict successBlock:^(id response) {
+        NSLog(@"-->>>%@",response);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"-->>>%@",[NSThread currentThread]);
+        });
+    } failBlock:^(NSError *error) {
+        NSDictionary *errorInfo = error.userInfo;
+        /* 统一错误码风格 */
+        NSString *content = errorInfo[KEY_CONTENT];
+        [UIAlertController alertShowInViewController:self title:TM_ALERT_NOTICE message:content buttonTitleArray:@[TM_ALERT_SURE] buttonTitleColorArray:@[[UIColor blackColor]] block:^(UIAlertController * _Nonnull alertController, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+            
+        }];
+    }];
 }
 
 - (IBAction)buttonType4:(UIButton *)sender {
-    
+    NSDictionary *dict = @{@"key": @"1e86b8ec4d601567841d73a942132f65",//1e86b8ec4d601567841d73a942132f65
+                           @"dtype": @"",
+                           @"parentid": @"10003"
+                           };
+    [TMNetworkingHelper postWithUrl:kaaaaaaUrl refreshRequest:NO cache:YES params:dict successBlock:^(id response) {
+        NSLog(@"-->>>%@",response);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"-->>>%@",[NSThread currentThread]);
+        });
+    } failBlock:^(NSError *error) {
+        NSDictionary *errorInfo = error.userInfo;
+        /* 统一错误码风格 */
+        NSString *content = errorInfo[KEY_CONTENT];
+        [UIAlertController alertShowInViewController:self title:TM_ALERT_NOTICE message:content buttonTitleArray:@[TM_ALERT_SURE] buttonTitleColorArray:@[[UIColor blackColor]] block:^(UIAlertController * _Nonnull alertController, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+            
+        }];
+    }];
 }
 
 - (IBAction)buttonType5:(UIButton *)sender {
-    
+    NSDictionary *dict = @{@"key": @"1e86b8ec4d601567841d73a942132f65",//1e86b8ec4d601567841d73a942132f65
+                           @"dtype": @"",
+                           @"parentid": @"10004"
+                           };
+    [TMNetworkingHelper postWithUrl:kaaaaaaUrl refreshRequest:NO cache:YES params:dict successBlock:^(id response) {
+        NSLog(@"-->>>%@",response);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"-->>>%@",[NSThread currentThread]);
+        });
+    } failBlock:^(NSError *error) {
+        NSDictionary *errorInfo = error.userInfo;
+        /* 统一错误码风格 */
+        NSString *content = errorInfo[KEY_CONTENT];
+        [UIAlertController alertShowInViewController:self title:TM_ALERT_NOTICE message:content buttonTitleArray:@[TM_ALERT_SURE] buttonTitleColorArray:@[[UIColor blackColor]] block:^(UIAlertController * _Nonnull alertController, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+            
+        }];
+    }];
 }
 
 

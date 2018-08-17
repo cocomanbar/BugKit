@@ -36,12 +36,6 @@
 /* 请求默认时间, 默认30秒 */
 @property (nonatomic, assign)NSInteger requestTimeout;
 
-/* 内存缓存时间, 默认是7天, 一旦设定不能轻易更改, 注意赋值方法 */
-@property (nonatomic, assign)NSTimeInterval cacheTime;
-
-/* 内存缓存阈值, 默认是200M, 一旦设定不能轻易更改, 注意赋值方法 */
-@property (nonatomic, assign)NSInteger diskValue;
-
 /**
  添加公共请求参数
  */
